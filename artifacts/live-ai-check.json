@@ -1,0 +1,10 @@
+{
+    "cue":  "You are uploading a photo",
+    "task":  "Licence renewal",
+    "progress":  "Step 3 of 5",
+    "done":  [
+
+             ],
+    "next_step":  "Upload photo",
+    "source":  "Cloudflare Workers AI"
+}

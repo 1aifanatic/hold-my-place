@@ -1,0 +1,14 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import '../extension/core.js';
+import worker from '../worker.js';
+const c=globalThis.HoldMyPlaceCore;
+const capture={url:'https://example.com/renew?token=private',title:'Licence renewal',headings:['Photo'],fields:[{key:'0',label:'Name',required:true,filled:true,value:'SECRET'},{key:'1',label:'Photo',required:true,filled:false}],focused:{key:'1',label:'Photo'},scroll:100,note:''};
+test('payload allowlist excludes values, URLs, keys and scroll',()=>{const text=JSON.stringify(c.payload(capture));for(const forbidden of ['SECRET','token','scroll','"key"','"url"','"value"'])assert.ok(!text.includes(forbidden));});
+test('required next field respects focus and falls back',()=>{assert.equal(c.nextField(capture).label,'Photo');assert.equal(c.nextField({...capture,focused:{key:'9'}}).label,'Photo');});
+test('submit warning overrides note and inferred next action',()=>{assert.match(c.fallback({...capture,note:'Submit again',focused:{label:'Pay now'}}),/^Check whether/);});
+test('sensitive pages and model output constraints',()=>{assert.ok(c.sensitive({...capture,url:'https://bank.example'}));assert.ok(c.sensitive({...capture,title:'Patient portal'}));assert.ok(!c.validCue('a '.repeat(21)));assert.ok(!c.validCue('<script>'));assert.ok(!c.validCue(''));assert.ok(!c.validCue('You are ready. Submit now.'));});
+test('missing next action does not fabricate submission',()=>{assert.match(c.fallback({...capture,fields:[]}),/unclear/);});
+test('worker handles malformed input, method and missing routes',async()=>{for(const [path,method,body,status] of [['/api/cue','GET',null,405],['/api/no','GET',null,404],['/api/cue','POST','{',503],['/api/cue','POST','{}',400]]){const r=await worker.fetch(new Request('https://demo.test'+path,{method,...(body?{body}:{})}),{});assert.equal(r.status,status);}});
+test('worker sends only allowlisted metadata and accepts structured cue',async()=>{let input;const r=await worker.fetch(new Request('https://demo.test/api/cue',{method:'POST',body:JSON.stringify(capture)}),{AI:{run:async(model,args)=>{input=args;return {response:JSON.stringify({cue:'You are renewing your licence; next, upload a photo.',done:[],next_step:'Photo'})};}}});assert.equal(r.status,200);assert.ok(!JSON.stringify(input).includes('SECRET'));});
+test('worker preserves fallback on invalid AI and applies rate limit',async()=>{const req=()=>new Request('https://demo.test/api/cue',{method:'POST',body:JSON.stringify(capture)});assert.equal((await worker.fetch(req(),{AI:{run:async()=>({response:'not json'})}})).status,503);assert.equal((await worker.fetch(req(),{AI_LIMIT:{limit:async()=>({success:false})}})).status,429);});

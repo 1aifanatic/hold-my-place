@@ -1,0 +1,9 @@
+{
+  "name": "hold-my-place",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {"directory": "./public", "binding": "ASSETS", "run_worker_first": ["/api/*"]},
+  "ai": {"binding": "AI"},
+  "ratelimits": [{"name": "AI_LIMIT", "namespace_id": "10517", "simple": {"limit": 10, "period": 60}}],
+  "observability": {"enabled": false}
+}

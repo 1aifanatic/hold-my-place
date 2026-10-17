@@ -1,0 +1,67 @@
+{
+  "at": "2026-10-17T12:38:32.171Z",
+  "results": [
+    {
+      "path": "/",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/install",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/watch",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/pitch",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/evaluation",
+      "status": 200,
+      "type": "text/html"
+    },
+    {
+      "path": "/downloads/hold-my-place.zip",
+      "status": 200,
+      "type": "application/zip"
+    },
+    {
+      "path": "/downloads/synthetic-results.csv",
+      "status": 200,
+      "type": "text/csv"
+    },
+    {
+      "path": "/media/hold-my-place-demo.mp4",
+      "status": 200,
+      "type": "video/mp4"
+    },
+    {
+      "path": "/media/demo.vtt",
+      "status": 200,
+      "type": "text/vtt"
+    },
+    {
+      "path": "/api/health",
+      "status": 200,
+      "type": "application/json"
+    }
+  ],
+  "media": {
+    "duration": 164.64,
+    "width": 1440,
+    "height": 1000,
+    "error": null
+  },
+  "errors": []
+}

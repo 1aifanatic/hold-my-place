@@ -1,0 +1,9 @@
+node_modules/
+.wrangler/
+.dev.vars
+artifacts/raw/
+artifacts/browser-profile/
+artifacts/voice/
+artifacts/recording-source.txt
+artifacts/package-check/
+*.log

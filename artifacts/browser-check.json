@@ -1,0 +1,19 @@
+{
+  "base": "https://hold-my-place.aiconic-innovations.workers.dev",
+  "at": "2026-10-17T12:38:23.862Z",
+  "captureMilliseconds": 6.899999991059303,
+  "passed": [
+    "extension capture",
+    "no typed values stored",
+    "return banner",
+    "continue focuses next field",
+    "note edit",
+    "wipe",
+    "demo hold/break/return",
+    "submit protection",
+    "expiry cleanup",
+    "offline capture",
+    "mobile no horizontal overflow",
+    "no page errors"
+  ]
+}

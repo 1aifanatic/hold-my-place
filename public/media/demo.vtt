@@ -1,0 +1,125 @@
+WEBVTT
+
+00:00:01.761 --> 00:00:05.697
+Browsers remember your tabs. They do not remember your intent.
+
+00:00:05.697 --> 00:00:09.633
+For someone with attention or working memory difficulties, a small
+
+00:00:09.633 --> 00:00:13.568
+interruption can mean starting an entire task again. Hold My
+
+00:00:13.568 --> 00:00:17.504
+Place is a private browser extension that leaves one clear
+
+00:00:17.504 --> 00:00:19.472
+next step for your return.
+
+00:00:21.488 --> 00:00:24.884
+Here is the working prototype. This is a practice licence
+
+00:00:24.884 --> 00:00:28.280
+renewal, with five steps and made up details. I complete
+
+00:00:28.280 --> 00:00:31.676
+my details and address, then reach the photo step. The
+
+00:00:31.676 --> 00:00:34.392
+application stays in my browser. Nothing is submitted.
+
+00:00:36.398 --> 00:00:39.794
+Now an interruption arrives. I hold my place, then step
+
+00:00:39.794 --> 00:00:43.190
+away. When I return, there is a short reminder: complete
+
+00:00:43.190 --> 00:00:46.586
+the photo. Continue takes me straight to the field and
+
+00:00:46.586 --> 00:00:49.982
+highlights it. There is less to reconstruct, and no pressure
+
+00:00:49.982 --> 00:00:50.661
+to hurry.
+
+00:00:52.662 --> 00:00:57.162
+The capture is visible. It records labels and whether fields
+
+00:00:57.162 --> 00:01:01.662
+are filled, never the answers I typed. A personal note
+
+00:01:01.662 --> 00:01:06.163
+can replace an unhelpful cue. Read aloud is optional. If
+
+00:01:06.163 --> 00:01:10.663
+I am finished, Forget everything removes the saved place. Control
+
+00:01:10.663 --> 00:01:12.463
+stays with the person.
+
+00:01:14.469 --> 00:01:18.591
+Cloudflare Workers hosts the demo and an optional AI endpoint.
+
+00:01:18.591 --> 00:01:22.713
+Before an AI request, you can inspect the exact metadata
+
+00:01:22.713 --> 00:01:26.835
+that will be sent. Workers AI turns that structure into
+
+00:01:26.835 --> 00:01:30.957
+a short cue. If the service fails, the local rule
+
+00:01:30.957 --> 00:01:35.080
+based cue remains available. No cloud database stores your places.
+
+00:01:37.089 --> 00:01:40.888
+This is also a real Chrome and Edge extension. On
+
+00:01:40.888 --> 00:01:44.686
+ordinary websites, use Alt H or the toolbar button. The
+
+00:01:44.686 --> 00:01:48.485
+return banner offers Continue and Done. The places list lets
+
+00:01:48.485 --> 00:01:52.284
+you inspect the capture, edit a note, and delete it.
+
+00:01:52.284 --> 00:01:55.322
+Captures expire after twenty four hours by default.
+
+00:01:57.333 --> 00:02:01.548
+Settings offer text, spoken cues, and configurable expiry. Cloud AI
+
+00:02:01.548 --> 00:02:05.763
+is off by default. Sensitive page detection blocks likely banking,
+
+00:02:05.763 --> 00:02:09.977
+health and payment pages from using AI. A focused submit
+
+00:02:09.977 --> 00:02:14.192
+or pay button produces a check first warning. These safeguards
+
+00:02:14.192 --> 00:02:18.407
+help, but cannot guarantee that every page or AI cue
+
+00:02:18.407 --> 00:02:19.250
+is correct.
+
+00:02:21.257 --> 00:02:25.657
+Hold My Place is a solo project for the accessibility
+
+00:02:25.657 --> 00:02:30.057
+and disability inclusion track. This example evaluation uses clearly labeled
+
+00:02:30.057 --> 00:02:34.457
+synthetic data, not real participants. It illustrates how we will
+
+00:02:34.457 --> 00:02:38.856
+measure completion, time to resume, effort, and cue accuracy. Real
+
+00:02:38.856 --> 00:02:43.256
+participant validation is next. A pause should not mean starting
+
+00:02:43.256 --> 00:02:43.696
+over.
+

@@ -1,0 +1,17 @@
+synthetic_id,condition,completed,resume_seconds,rereading_seconds,duplicate_actions,effort_1_to_7,cue_correct
+S01,control,1,48,32,0,5,
+S01,assisted,1,22,12,0,3,1
+S02,control,1,65,44,1,6,
+S02,assisted,1,30,20,0,4,1
+S03,control,0,90,62,0,7,
+S03,assisted,1,40,28,0,5,1
+S04,control,1,37,21,0,4,
+S04,assisted,1,25,13,0,3,1
+S05,control,1,54,35,0,5,
+S05,assisted,1,32,19,0,4,0
+S06,control,0,100,75,1,7,
+S06,assisted,0,88,66,0,7,0
+S07,control,1,42,27,0,4,
+S07,assisted,1,24,15,0,3,1
+S08,control,1,76,49,0,6,
+S08,assisted,1,35,22,0,4,1

@@ -25,8 +25,10 @@ Updated 2026-10-17. The user's latest direction is a **solo submission with expl
 | Recorded demo | Actual browser interactions, MiniMax clone `moss_audio_ff64ff57-9268-11f1-834d-364bc9e5c396`, captions, downloadable MP4, public watch page |
 | Pitch | Six-slide printable HTML pitch at `/pitch` |
 | Submission copy | `DEVPOST.md`, research/disclosure/architecture/risks/adoption/solo contributor details |
-| Source access | https://github.com/1aifanatic/hold-my-place (verify remote commit after final push) |
+| Source access | https://github.com/1aifanatic/hold-my-place; remote main compared successfully with the local commit after push |
 
 Operational limits: ordinary top-level web forms only; browser-restricted pages, PDF viewers, embedded frames and arbitrary closed shadow roots are outside coverage. Form answers are never restored. Rule-based sensitive-site detection and AI output constraints do not guarantee correctness. Real participant validation remains future work, with the synthetic illustration explicitly separated.
+
+Final verification: eight unit/API tests passed; twelve installed-extension/browser checks passed against the live deployment; all eleven public delivery URLs returned HTTP 200 with expected media/archive types. The captured local save took 6.9 ms in this single engineering run (not a population performance claim). The extension ZIP was expanded and compared byte-for-byte with source files. The final MP4 is 164.64 seconds, 1440×1000 H.264 with AAC audio; browser playback succeeded. Audio mean level was −17.0 dB and peak −0.9 dB. A contact sheet was inspected. Receipts: `artifacts/browser-check.json`, `artifacts/final-check.json`, `artifacts/live-ai-check.json`, `artifacts/video-check.json`.
 
 Submission itself is not performed. The event overview and full rules conflict about eligibility and deadline time; use the earlier 11:45 PM EDT October 21 deadline and confirm solo eligibility with organizers. The full rules explicitly allow individual participation, while the overview says team required. Finalist attendance is October 24 in Charlotte.

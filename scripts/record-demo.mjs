@@ -2,7 +2,7 @@ import {chromium} from 'playwright';
 import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
 import {resolve} from 'node:path';
 import assert from 'node:assert/strict';
-const base='https://hold-my-place.aiconic-innovations.workers.dev';
+const base='https://holdmyplace.aifanatic.pro';
 const lines=JSON.parse(readFileSync('artifacts/narration-timing.json','utf8'));
 mkdirSync('artifacts/raw',{recursive:true});
 const context=await chromium.launchPersistentContext('',{headless:true,channel:'chromium',args:[`--disable-extensions-except=${resolve('extension')}`,`--load-extension=${resolve('extension')}`],viewport:{width:1440,height:1000},recordVideo:{dir:'artifacts/raw',size:{width:1440,height:1000}}});

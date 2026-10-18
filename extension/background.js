@@ -1,6 +1,6 @@
 import './core.js';
 const core = globalThis.HoldMyPlaceCore;
-const defaults = {expiry:24, voice:'text', ai:false, endpoint:''};
+const defaults = {expiry:24, voice:'text', ai:false, endpoint:'https://holdmyplace.aifanatic.pro'};
 async function state() {
   const s = await chrome.storage.local.get(['places','settings']);
   const places = (s.places || []).filter(p => p.expires > Date.now());
@@ -44,7 +44,7 @@ chrome.runtime.onMessage.addListener((msg,sender,respond) => {
     if(msg.type === 'ai') {
       if(!s.settings.ai || core.sensitive(p) || core.dangerous(p)) throw new Error('Cloud AI is disabled for this place. Local cue retained.');
       const endpoint = new URL(s.settings.endpoint);
-      if(endpoint.protocol!=='https:' || !endpoint.hostname.endsWith('.workers.dev')) throw new Error('Use the HTTPS Cloudflare Workers endpoint.');
+      if(endpoint.protocol!=='https:' || !(endpoint.hostname==='holdmyplace.aifanatic.pro'||endpoint.hostname.endsWith('.workers.dev'))) throw new Error('Use https://holdmyplace.aifanatic.pro or an HTTPS workers.dev endpoint.');
       const r=await fetch(endpoint.origin+'/api/cue',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(core.payload(p)),signal:AbortSignal.timeout(12000)});
       if(!r.ok) throw new Error('AI unavailable. Your local cue is still saved.');
       const data=await r.json();if(!core.validCue(data.cue)) throw new Error('Invalid AI response. Local cue retained.');

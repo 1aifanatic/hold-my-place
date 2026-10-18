@@ -2,7 +2,7 @@
 
 A private browser memory aid for interrupted online tasks. Save where you were and return to one clear next step.
 
-**[Live demo](https://hold-my-place.aiconic-innovations.workers.dev)** · **[Install extension](https://hold-my-place.aiconic-innovations.workers.dev/install)** · **[Recorded demo](https://hold-my-place.aiconic-innovations.workers.dev/watch)** · **[Pitch deck](https://hold-my-place.aiconic-innovations.workers.dev/pitch)** · **[Privacy](https://hold-my-place.aiconic-innovations.workers.dev/privacy)**
+**[Live demo](https://holdmyplace.aifanatic.pro)** · **[Install extension](https://holdmyplace.aifanatic.pro/install)** · **[Recorded demo](https://holdmyplace.aifanatic.pro/watch)** · **[Pitch deck](https://holdmyplace.aifanatic.pro/pitch)** · **[Privacy](https://holdmyplace.aifanatic.pro/privacy)**
 
 Built for [IEEE Hack for Humanity](https://ieee-ai-hack-for-humanity.devpost.com/), Track 2: AI for Accessibility and Disability Inclusion.
 
@@ -17,6 +17,8 @@ Solo contributor: Naveen Chatlapalli. [Public source repository](https://github.
 5. Edit a note, try an optional AI cue, or forget everything.
 
 For use on other websites, download the ZIP, extract it, enable developer mode at `chrome://extensions` or `edge://extensions`, and load the folder containing manifest.json. Reload existing tabs. Press **Alt+H**, or use the toolbar popup. Configure shortcut conflicts at `chrome://extensions/shortcuts`.
+
+Domain update: extension 1.0.1 supports `https://holdmyplace.aifanatic.pro` for optional AI. Existing unpacked installations should replace the extension files and press Reload on the extensions page. To switch AI endpoints, enter the new origin in Settings and grant its optional network permission. Existing workers.dev endpoints remain supported.
 
 ## Small architecture
 
@@ -67,7 +69,7 @@ The package script copies the shared cue policy into the demo and builds the ext
 - [Monk, Trafton and Boehm-Davis: effect of interruption duration and demand on resuming suspended goals](https://pubmed.ncbi.nlm.nih.gov/19102614/) reports that interruption duration and demand affect task resumption. This motivates measuring time to resume rather than claiming generic productivity gains.
 - [NIMH: ADHD in Adults](https://www.nimh.nih.gov/health/publications/adhd-what-you-need-to-know) describes challenges with attention, staying on task and organization. It supports the user-need framing, not efficacy of this prototype.
 
-No interviews, participant study or measured improvement claims are presented. At the owner's request, [a clearly labeled synthetic dataset](https://hold-my-place.aiconic-innovations.workers.dev/evaluation) illustrates the evaluation method; it contains invented scenarios, not human observations. No broad checkout abandonment statistic is substituted for evidence about people with cognitive disabilities. See `submission/STUDY.md` for the recruitment, consent, counterbalanced protocol and raw results template. Two practice variants are available: [licence renewal](https://hold-my-place.aiconic-innovations.workers.dev/#demo) and [library membership](https://hold-my-place.aiconic-innovations.workers.dev/?task=library#demo).
+No interviews, participant study or measured improvement claims are presented. At the owner's request, [a clearly labeled synthetic dataset](https://holdmyplace.aifanatic.pro/evaluation) illustrates the evaluation method; it contains invented scenarios, not human observations. No broad checkout abandonment statistic is substituted for evidence about people with cognitive disabilities. See `submission/STUDY.md` for the recruitment, consent, counterbalanced protocol and raw results template. Two practice variants are available: [licence renewal](https://holdmyplace.aifanatic.pro/#demo) and [library membership](https://holdmyplace.aifanatic.pro/?task=library#demo).
 
 ## Scope and limitations
 

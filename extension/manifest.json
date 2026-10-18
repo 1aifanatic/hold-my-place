@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Hold My Place",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A private memory aid for interrupted web tasks. Save your place, find your next step.",
   "permissions": ["storage", "activeTab", "alarms"],
-  "optional_host_permissions": ["https://*.workers.dev/*"],
+  "optional_host_permissions": ["https://holdmyplace.aifanatic.pro/*", "https://*.workers.dev/*"],
   "background": {"service_worker": "background.js", "type": "module"},
   "action": {"default_popup": "popup.html", "default_title": "Hold My Place"},
   "options_page": "options.html",

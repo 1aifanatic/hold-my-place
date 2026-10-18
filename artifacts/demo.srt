@@ -1,164 +1,164 @@
 1
-00:00:01,761 --> 00:00:05,697
+00:00:01,483 --> 00:00:05,419
 Browsers remember your tabs. They do not remember your intent.
 
 2
-00:00:05,697 --> 00:00:09,633
+00:00:05,419 --> 00:00:09,355
 For someone with attention or working memory difficulties, a small
 
 3
-00:00:09,633 --> 00:00:13,568
+00:00:09,355 --> 00:00:13,290
 interruption can mean starting an entire task again. Hold My
 
 4
-00:00:13,568 --> 00:00:17,504
+00:00:13,290 --> 00:00:17,226
 Place is a private browser extension that leaves one clear
 
 5
-00:00:17,504 --> 00:00:19,472
+00:00:17,226 --> 00:00:19,194
 next step for your return.
 
 6
-00:00:21,488 --> 00:00:24,884
+00:00:21,195 --> 00:00:24,591
 Here is the working prototype. This is a practice licence
 
 7
-00:00:24,884 --> 00:00:28,280
+00:00:24,591 --> 00:00:27,987
 renewal, with five steps and made up details. I complete
 
 8
-00:00:28,280 --> 00:00:31,676
+00:00:27,987 --> 00:00:31,383
 my details and address, then reach the photo step. The
 
 9
-00:00:31,676 --> 00:00:34,392
+00:00:31,383 --> 00:00:34,099
 application stays in my browser. Nothing is submitted.
 
 10
-00:00:36,398 --> 00:00:39,794
+00:00:36,107 --> 00:00:39,503
 Now an interruption arrives. I hold my place, then step
 
 11
-00:00:39,794 --> 00:00:43,190
+00:00:39,503 --> 00:00:42,899
 away. When I return, there is a short reminder: complete
 
 12
-00:00:43,190 --> 00:00:46,586
+00:00:42,899 --> 00:00:46,295
 the photo. Continue takes me straight to the field and
 
 13
-00:00:46,586 --> 00:00:49,982
+00:00:46,295 --> 00:00:49,691
 highlights it. There is less to reconstruct, and no pressure
 
 14
-00:00:49,982 --> 00:00:50,661
+00:00:49,691 --> 00:00:50,370
 to hurry.
 
 15
-00:00:52,662 --> 00:00:57,162
+00:00:52,386 --> 00:00:56,886
 The capture is visible. It records labels and whether fields
 
 16
-00:00:57,162 --> 00:01:01,662
+00:00:56,886 --> 00:01:01,386
 are filled, never the answers I typed. A personal note
 
 17
-00:01:01,662 --> 00:01:06,163
+00:01:01,386 --> 00:01:05,887
 can replace an unhelpful cue. Read aloud is optional. If
 
 18
-00:01:06,163 --> 00:01:10,663
+00:01:05,887 --> 00:01:10,387
 I am finished, Forget everything removes the saved place. Control
 
 19
-00:01:10,663 --> 00:01:12,463
+00:01:10,387 --> 00:01:12,187
 stays with the person.
 
 20
-00:01:14,469 --> 00:01:18,591
+00:01:14,199 --> 00:01:18,321
 Cloudflare Workers hosts the demo and an optional AI endpoint.
 
 21
-00:01:18,591 --> 00:01:22,713
+00:01:18,321 --> 00:01:22,443
 Before an AI request, you can inspect the exact metadata
 
 22
-00:01:22,713 --> 00:01:26,835
+00:01:22,443 --> 00:01:26,565
 that will be sent. Workers AI turns that structure into
 
 23
-00:01:26,835 --> 00:01:30,957
+00:01:26,565 --> 00:01:30,687
 a short cue. If the service fails, the local rule
 
 24
-00:01:30,957 --> 00:01:35,080
+00:01:30,687 --> 00:01:34,810
 based cue remains available. No cloud database stores your places.
 
 25
-00:01:37,089 --> 00:01:40,888
+00:01:36,820 --> 00:01:40,619
 This is also a real Chrome and Edge extension. On
 
 26
-00:01:40,888 --> 00:01:44,686
+00:01:40,619 --> 00:01:44,417
 ordinary websites, use Alt H or the toolbar button. The
 
 27
-00:01:44,686 --> 00:01:48,485
+00:01:44,417 --> 00:01:48,216
 return banner offers Continue and Done. The places list lets
 
 28
-00:01:48,485 --> 00:01:52,284
+00:01:48,216 --> 00:01:52,015
 you inspect the capture, edit a note, and delete it.
 
 29
-00:01:52,284 --> 00:01:55,322
+00:01:52,015 --> 00:01:55,053
 Captures expire after twenty four hours by default.
 
 30
-00:01:57,333 --> 00:02:01,548
+00:01:57,068 --> 00:02:01,283
 Settings offer text, spoken cues, and configurable expiry. Cloud AI
 
 31
-00:02:01,548 --> 00:02:05,763
+00:02:01,283 --> 00:02:05,498
 is off by default. Sensitive page detection blocks likely banking,
 
 32
-00:02:05,763 --> 00:02:09,977
+00:02:05,498 --> 00:02:09,712
 health and payment pages from using AI. A focused submit
 
 33
-00:02:09,977 --> 00:02:14,192
+00:02:09,712 --> 00:02:13,927
 or pay button produces a check first warning. These safeguards
 
 34
-00:02:14,192 --> 00:02:18,407
+00:02:13,927 --> 00:02:18,142
 help, but cannot guarantee that every page or AI cue
 
 35
-00:02:18,407 --> 00:02:19,250
+00:02:18,142 --> 00:02:18,985
 is correct.
 
 36
-00:02:21,257 --> 00:02:25,657
+00:02:20,994 --> 00:02:25,394
 Hold My Place is a solo project for the accessibility
 
 37
-00:02:25,657 --> 00:02:30,057
+00:02:25,394 --> 00:02:29,794
 and disability inclusion track. This example evaluation uses clearly labeled
 
 38
-00:02:30,057 --> 00:02:34,457
+00:02:29,794 --> 00:02:34,194
 synthetic data, not real participants. It illustrates how we will
 
 39
-00:02:34,457 --> 00:02:38,856
+00:02:34,194 --> 00:02:38,593
 measure completion, time to resume, effort, and cue accuracy. Real
 
 40
-00:02:38,856 --> 00:02:43,256
+00:02:38,593 --> 00:02:42,993
 participant validation is next. A pause should not mean starting
 
 41
-00:02:43,256 --> 00:02:43,696
+00:02:42,993 --> 00:02:43,433
 over.
 

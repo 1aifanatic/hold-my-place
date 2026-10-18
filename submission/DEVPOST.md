@@ -4,17 +4,17 @@
 
 **Primary track:** AI for Accessibility and Disability Inclusion
 
-**Demo:** https://hold-my-place.aiconic-innovations.workers.dev
+**Demo:** https://holdmyplace.aifanatic.pro
 
-**Recorded demo (MiniMax cloned voice):** https://hold-my-place.aiconic-innovations.workers.dev/watch
+**Recorded demo (MiniMax cloned voice):** https://holdmyplace.aifanatic.pro/watch
 
-**Pitch deck:** https://hold-my-place.aiconic-innovations.workers.dev/pitch
+**Pitch deck:** https://holdmyplace.aifanatic.pro/pitch
 
 **Team:** Solo — Naveen Chatlapalli.
 
 **Source:** https://github.com/1aifanatic/hold-my-place
 
-**Synthetic evaluation (not participant results):** https://hold-my-place.aiconic-innovations.workers.dev/evaluation
+**Synthetic evaluation (not participant results):** https://holdmyplace.aifanatic.pro/evaluation
 
 ## Inspiration / problem
 

@@ -1,7 +1,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {writeFileSync} from 'node:fs';
-const base='https://hold-my-place.aiconic-innovations.workers.dev';
+const base='https://holdmyplace.aifanatic.pro';
 const paths=['/','/install','/privacy','/watch','/pitch','/evaluation','/downloads/hold-my-place.zip','/downloads/synthetic-results.csv','/media/hold-my-place-demo.mp4','/media/demo.vtt','/api/health'];
 const results=[];
 for(const path of paths){const r=await fetch(base+path,{method:'HEAD'});assert.equal(r.status,200,path);results.push({path,status:r.status,type:r.headers.get('content-type')});}
